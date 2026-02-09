@@ -1,0 +1,23 @@
+{
+  "name": "@restaurant/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "migrate:up": "node ./scripts/migrate-up.js",
+    "migrate": "pnpm migrate:up",
+    "seed": "node ./scripts/seed.js",
+    "dev": "node --watch ./src/index.js",
+    "start": "node ./src/index.js",
+    "build": "node ./scripts/build-static.js",
+    "vitest": "vitest run",
+    "test": "pnpm vitest"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.4"
+  }
+}
